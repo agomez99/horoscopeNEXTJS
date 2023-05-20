@@ -3,7 +3,7 @@ import mapboxgl from "mapbox-gl";
 import React, { useEffect, useState, useRef } from "react";
 import ReactDOM from "react-dom";
 import geoJson from "../data/locations.json"
-import signs from "../data/horoscope2.json"
+import signs from "../data/horoscope.json"
 import Image from "next/image";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
