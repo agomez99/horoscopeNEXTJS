@@ -67,7 +67,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color:white;
 }
 
 html,
@@ -115,6 +114,8 @@ p{
 
 .image-list {
   height: 110px;
+  border-radius: 50%;
+  
 }
 
 .chart-container {
@@ -127,6 +128,9 @@ p{
 .sign-div{
   background: rgba(0, 0, 0, 0.8);
   border-radius: 2%;
+}
+.signpage-image{
+  border-radius: 50%;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -32,7 +32,7 @@ const Page = ({ title, range, content, image, compatabilitySign1, compatabilityS
                     </Col>
                     <Col sm={4}>
                         <div className="image-box">
-                            <Image src={image} width={300} height={300} alt="image" className='bio-image' />
+                            <Image src={image} width={300} height={300} alt="image" className='signpage-image' />
                         </div>
                     </Col>
                 </Row>
