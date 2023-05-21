@@ -8,9 +8,21 @@ import { VictoryPie, VictoryLabel } from 'victory';
 import { useEffect, useState } from 'react';
 
 
-const Page = ({ title, range, content, image, compatabilitySign1, compatabilitySign2, compatabilitySign3, comp1percent, comp2percent, comp3percent, videobackground }) => {
+const Page = ({ title, range, content, image, compatabilitySign1, compatabilitySign2, compatabilitySign3, comp1percent, comp2percent, comp3percent, videobackground, rangeFrom, rangeTo }) => {
     const current = new Date();
+
+
     const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
+    const currentDate = new Date().toLocaleDateString();
+    const from = new Date(rangeFrom);
+    const to = new Date(rangeTo);
+    
+    const check = new Date(currentDate);
+    const isWithinRange = check >= from && check <= to;
+    
+    console.log(isWithinRange);
+    
+
 
     const [graphicData, setGraphicData] = useState([{ y: 0 }, { y: 0 }, { y: 100 }]); // Data used to make the animate prop work
     const [graphicData2, setGraphicData2] = useState([{ y: 0 }, { y: 0 }, { y: 100 }]); // Data used to make the animate prop work
@@ -92,7 +104,7 @@ export async function getStaticProps({ params }) {
     const { features: categories } = signs;
     const category = categories.find(({ properties: { title } }) => title === params.slug);
     const {
-        properties: { title, range, content, image, compatabilitySign1, compatabilitySign2, compatabilitySign3, comp1percent, comp2percent, comp3percent, videobackground }
+        properties: { title, range, content, image, compatabilitySign1, compatabilitySign2, compatabilitySign3, comp1percent, comp2percent, comp3percent, videobackground, rangeFrom, rangeTo }
     } = category;
     return {
         props: {
@@ -106,7 +118,9 @@ export async function getStaticProps({ params }) {
             comp1percent,
             comp2percent,
             comp3percent,
-            videobackground
+            videobackground,
+            rangeFrom,
+            rangeTo
         }
     }
 }
