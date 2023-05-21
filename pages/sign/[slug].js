@@ -9,7 +9,7 @@ import { VictoryPie, VictoryLabel } from 'victory';
 import { useEffect, useState } from 'react';
 
 
-const Page = ({ title, range, content, image, compatabilitySign1, compatabilitySign2, compImage1, compImage2, videobackground }) => {
+const Page = ({ title, range, content, image, compatabilitySign1, compatabilitySign2, compatabilitySign3, comp1percent, comp2percent, comp3percent, videobackground }) => {
     const router = useRouter();
     const [graphicData, setGraphicData] = useState([{ y: 0 }, { y: 0 }, { y: 100 }]); // Data used to make the animate prop work
 
@@ -25,30 +25,44 @@ const Page = ({ title, range, content, image, compatabilitySign1, compatabilityS
             <Navbar />
             <Container className='sign-div'>
                 <Row>
-                    <Col md={8}>
+                    <Col md={6}>
                         <h1 className='sign-title'>{title}</h1>
                         <p className='sign-range'>{range}</p>
                         <p className='sign-content'>{content}</p>
                     </Col>
-                    <Col sm={4}>
+                    <Col md={6} className='text-center'>
                         <div className="image-box">
                             <Image src={image} width={300} height={300} alt="image" className='signpage-image' />
                         </div>
                     </Col>
                 </Row>
-                <div className="chart-container">
-                    <p>{compatabilitySign1}</p>
-                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="svg-container" style={{ width: "400px", height: "400px" }}>
-                        <VictoryPie standalone={false} data={graphicData} width={250} height={250} colorScale={['#c949a7', '#870865']} innerRadius={68} labelRadius={100} animate={{ easing: 'exp' }} labels={() => null}  />
-                        <VictoryLabel textAnchor="middle" style={{ fontSize: 40,  fill: "white" }} x={125} y={125} text="90%" />
-                    </svg>
-                    <p>{compatabilitySign2}</p>
+                <Row>
+                    <Col md={12} className=" ">
 
-                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="svg-container" style={{ width: "400px", height: "400px" }}>
+                    <div className="chart-container">
+                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="svg-container" style={{ width: "400px", height: "220px" }}>
+                        <VictoryPie standalone={false} data={graphicData} width={250} height={250} colorScale={['#c949a7', '#870865']} innerRadius={68} labelRadius={100} animate={{ easing: 'exp' }} labels={() => null}  />
+                        <VictoryLabel textAnchor="middle" style={{ fontSize: 40,  fill: "white" }} x={125} y={145} text={comp1percent} />
+                        <VictoryLabel textAnchor="middle" style={{ fontSize: 30,  fill: "white" }} x={125} y={110} text={compatabilitySign1} />
+                    </svg>
+
+
+                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="svg-container" style={{ width: "400px", height: "220px" }}>
                         <VictoryPie standalone={false} data={graphicData} width={250} height={250} colorScale={['#c949a7', '#870865']} innerRadius={68} labelRadius={100} animate={{ easing: 'exp' }} labels={() => null} />
-                        <VictoryLabel textAnchor="middle" style={{ fontSize: 40,  fill: "white" }} x={125} y={125} text="90%" />
+                        <VictoryLabel textAnchor="middle" style={{ fontSize: 40,  fill: "white" }} x={125} y={145} text={comp2percent}/>
+                        <VictoryLabel textAnchor="middle" style={{ fontSize: 30,  fill: "white" }} x={125} y={110} text={compatabilitySign2} />
+                    </svg>
+
+                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="svg-container" style={{ width: "400px", height: "220px" }}>
+                        <VictoryPie standalone={false} data={graphicData} width={250} height={250} colorScale={['#c949a7', '#870865']} innerRadius={68} labelRadius={100} animate={{ easing: 'exp' }} labels={() => null} />
+                        <VictoryLabel textAnchor="middle" style={{ fontSize: 40,  fill: "white" }} x={125} y={145} text={comp3percent} />
+                        <VictoryLabel textAnchor="middle" style={{ fontSize: 30,  fill: "white" }} x={125} y={110} text={compatabilitySign3} />
                     </svg>
                 </div>
+
+                    </Col>
+                </Row>
+
                 <video className='videoTag' autoPlay loop muted>
           <source src={videobackground} type='video/mp4' />
       </video>
@@ -72,9 +86,9 @@ export async function getStaticProps({ params }) {
         ({ properties: { title } }) => title === params.slug
     );
 
-    const { title, range, content, image, compatabilitySign1, compatabilitySign2, compImage1, compImage2, videobackground } = category.properties;
+    const { title, range, content, image, compatabilitySign1, compatabilitySign2, compatabilitySign3, comp1percent, comp2percent, comp3percent,  videobackground,  } = category.properties;
 
-    return { props: { title, range, content, image, compatabilitySign2, compatabilitySign1, compImage1, compImage2, videobackground } }
+    return { props: { title, range, content, image, compatabilitySign2, compatabilitySign1, compatabilitySign3, comp1percent, comp2percent, comp3percent,  videobackground } }
 }
 
 

@@ -117,7 +117,9 @@ p{
   border-radius: 50%;
   
 }
-
+.image-box{
+  margin-top: 1rem;
+}
 .chart-container {
   display: flex;
 }
@@ -128,6 +130,9 @@ p{
 .sign-div{
   background: rgba(0, 0, 0, 0.8);
   border-radius: 2%;
+}
+.sign-content{
+  font-size:1.5rem;
 }
 .signpage-image{
   border-radius: 50%;

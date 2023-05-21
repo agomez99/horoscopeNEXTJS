@@ -24,7 +24,7 @@ const Map = () => {
                   <a href={`/sign/${signs.features[subIndex + index * 4].properties.title}`} className="signlink">
                     <p>{signs.features[subIndex + index * 4].properties.title}</p>
                     <ReactImageFallback
-                      src={signs.features[subIndex + index * 4].properties.image}
+                      src={signs.features[subIndex + index * 4].properties.logoImage}
                       fallbackImage={fallback}
                       initialImage="https://i.ibb.co/ZGLW03w/loading1.gif"
                       alt="signimage"
