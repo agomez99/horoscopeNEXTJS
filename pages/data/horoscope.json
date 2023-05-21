@@ -11,8 +11,8 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
-
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626073/virgo_lbl60j.mp4"
 
       }
     },
@@ -27,7 +27,10 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626986/aries_kakl6p.mp4"
+
+        
       }
     },
     {
@@ -41,7 +44,9 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626977/leo_yitzpm.mp4"
+
       }
     },
     {
@@ -55,7 +60,9 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626986/cancer_taywcn.mp4"
+
       }
     },
     {
@@ -69,7 +76,9 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626985/gemini_yuwuip.mp4"
+
        }
     },
     {
@@ -83,7 +92,9 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684627148/taurus_oxgem1.mp4"
+
       }
     },
     {
@@ -97,7 +108,9 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626985/libra_v8wbcs.mp4"
+
       }
     },
     {
@@ -111,7 +124,9 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626977/scorpio_m1ymgl.mp4"
+
       }
     },
     {
@@ -125,7 +140,9 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626978/aquarius_xiwc5u.mp4"
+
       }
     },
     {
@@ -139,7 +156,9 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626978/capricorn_ffo13e.mp4"
+
       }
     },
     {
@@ -153,7 +172,9 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626978/sagittarius_wrtt8p.mp4"
+
       }
     },
     {
@@ -167,7 +188,9 @@
         "compatabilitySign1":"Capricorn",
         "compImage1":"/images/capricorn.png",
         "compatabilitySign2":"Taurus",
-        "compImage2":"/images/taurus.png"
+        "compImage2":"/images/taurus.png",
+        "videobackground":"https://res.cloudinary.com/dwq30zq8e/video/upload/v1684626986/pisces_jaq0ne.mp4"
+
       }
     }
   ]
