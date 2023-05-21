@@ -9,6 +9,8 @@ import { useEffect, useState } from 'react';
 
 
 const Page = ({ title, range, content, image, compatabilitySign1, compatabilitySign2, compatabilitySign3, comp1percent, comp2percent, comp3percent, videobackground }) => {
+    const current = new Date();
+    const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
 
     const [graphicData, setGraphicData] = useState([{ y: 0 }, { y: 0 }, { y: 100 }]); // Data used to make the animate prop work
     const [graphicData2, setGraphicData2] = useState([{ y: 0 }, { y: 0 }, { y: 100 }]); // Data used to make the animate prop work
@@ -34,6 +36,7 @@ const Page = ({ title, range, content, image, compatabilitySign1, compatabilityS
                 <Row>
                     <Col md={6}>
                         <h1 className='sign-title'>{title}</h1>
+                        <p>{date}</p>
                         <p className='sign-range'>{range}</p>
                         <p className='sign-content'>{content}</p>
                     </Col>
