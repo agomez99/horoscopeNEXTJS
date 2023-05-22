@@ -106,9 +106,7 @@ a.nav-link{
   color:white;
 }
 
-.dropdown-item{
-  text-align: center;
-}
+
 h1{
   color:white;
 }
@@ -132,6 +130,7 @@ p{
 }
 .image-box{
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 .chart-container {
   display: flex;
@@ -154,6 +153,11 @@ p{
 .todaysImage{
   margin:10px;
   float:right;
+}
+
+.v-pie{
+  width:250px;
+  height:250px;
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -201,4 +205,13 @@ p{
 
   }
 
+  .svg-container{
+    width:100px;
+    height:100px;
+  }
+
+  .v-pie{
+    width:100px;
+    height:100px;
+  }
 }
