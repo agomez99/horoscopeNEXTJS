@@ -13,15 +13,13 @@ const Page = ({ title, range, content, image, compatabilitySign1, compatabilityS
 
 
     const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
-    const currentDate = new Date().toLocaleDateString();
-    const from = new Date(rangeFrom);
-    const to = new Date(rangeTo);
-    
-    const check = new Date(currentDate);
-    const isWithinRange = check >= from && check <= to;
-    
-    console.log(isWithinRange);
-    
+
+    var currentDate = new Date().toJSON().slice(0,10);
+    console.log(currentDate);
+    var from = new Date('2020/01/01');
+    var to   = new Date('2020/01/31');
+    var check = new Date(currentDate);
+    console.log(check > from && check < to);
 
 
     const [graphicData, setGraphicData] = useState([{ y: 0 }, { y: 0 }, { y: 100 }]); // Data used to make the animate prop work
@@ -60,7 +58,7 @@ const Page = ({ title, range, content, image, compatabilitySign1, compatabilityS
                 </Row>
                 <Row>
                     <Col md={12} className=" ">
-
+                                <p className='text-center'>Compatability Matches</p>
                         <div className="chart-container">
                             <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="svg-container" style={{ width: "400px", height: "220px" }}>
                                 <VictoryPie standalone={false} data={graphicData} width={250} height={250} colorScale={['#c949a7', '#870865']} innerRadius={68} labelRadius={100} animate={{ easing: 'exp' }} labels={() => null} />
