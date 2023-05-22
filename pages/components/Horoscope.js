@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ReactImageFallback from "react-image-fallback";
-
+import TodaysHoroscope from "./TodaysHoroscope";
 const Map = () => {
   const dataForDisplay = signs.features
   const [isLoading, setIsLoading] = useState(false)
@@ -14,10 +14,10 @@ const Map = () => {
   }
   const fallback = "https://i.ibb.co/ZGLW03w/loading1.gif"
   return (
-    <Container className="horoscope-container">
-      <Row className="text-center">
+    <Container fluid={true} className="horoscope-container">
+      <Row >
         {Array.from({ length: 3 }, (_, index) => (
-          <Col xs={12} xxl={4} lg={4} md={4} sm={4} className="horoscope-col" style={{ height: 'auto' }} key={index}>
+          <Col className="horoscope-col text-center" style={{ height: 'auto' }} key={index}>
             <div className="image-box-container">
               {dataForDisplay.slice(index * 4, index * 4 + 4).map((title, subIndex) => (
                 <ul key={subIndex} className="ul-img">
@@ -36,6 +36,9 @@ const Map = () => {
             </div>
           </Col>
         ))}
+        <Col xs={12} xxl={6} lg={6} md={6} sm={12} className="horoscope-col" style={{ height: 'auto' }} >
+           <TodaysHoroscope/>
+          </Col>
       </Row>
     </Container>
   )

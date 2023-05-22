@@ -74,10 +74,13 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
-
+.nav{
+  background-color: rgb(52, 52, 112);
+}
 .horoscope-container{
     background: rgba(0, 0, 0, 0.8);
-    border-radius: 5%;
+    margin-top: 10%;
+
 }
 .videoTag{
   width: 100vw;
@@ -103,6 +106,12 @@ a.nav-link{
   color:white;
 }
 
+.dropdown-item{
+  text-align: center;
+}
+h1{
+  color:white;
+}
 
 p{
   color:white;
@@ -116,6 +125,10 @@ p{
   height: 110px;
   border-radius: 50%;
   
+}
+
+.image-list:hover{
+  transform: scale(1.1); 
 }
 .image-box{
   margin-top: 1rem;
@@ -138,6 +151,10 @@ p{
   border-radius: 50%;
 }
 
+.todaysImage{
+  margin:10px;
+  float:right;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -149,10 +166,6 @@ p{
   .image {
     width: 100px;
     height: 100px;
-  }
-
-  .image-box-container {
-    display: flex;
   }
 
   .artist-image-container {
@@ -178,6 +191,14 @@ p{
   .signlink {
     text-decoration: none;
     font-size: 1rem;
+  }
+  .todaysImage{
+    height:100px;
+    width:100px;
+  }
+  .todaysContent{
+    font-size: .8rem;
+
   }
 
 }

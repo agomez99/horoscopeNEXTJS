@@ -3,9 +3,6 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Horoscope from "./components/Horoscope"
 import Navbar from './components/Navbar'
-import Image from 'next/image'
-import TodaysHoroscope from './components/TodaysHoroscope'
-
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
@@ -18,14 +15,13 @@ export default function Home() {
         <meta charset="utf-8" />
       </Head>
       <Navbar />
-          <Horoscope />
-    <TodaysHoroscope />
+      <Horoscope />
       <video className='videoTag' autoPlay loop muted>
-          <source src="https://res.cloudinary.com/dwq30zq8e/video/upload/v1684623101/zodiac_nn9jbh.mp4" type='video/mp4' />
-   
-      <main className={`${styles.main}`}>
+        <source src="https://res.cloudinary.com/dwq30zq8e/video/upload/v1684623101/zodiac_nn9jbh.mp4" type='video/mp4' />
 
-      </main>
+        <main className={`${styles.main}`}>
+
+        </main>
       </video>
 
     </>
