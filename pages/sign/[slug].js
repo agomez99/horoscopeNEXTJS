@@ -10,17 +10,27 @@ import { useEffect, useState } from 'react';
 
 const Page = ({ title, range, content, image, compatabilitySign1, compatabilitySign2, compatabilitySign3, comp1percent, comp2percent, comp3percent, videobackground, rangeFrom, rangeTo }) => {
     const current = new Date();
+    
+    function formatDate(date) {
+        date.setDate(date.getDate() + 1);
+        return date.toLocaleString('en-us', { month: 'short', day: 'numeric' });
+      }
+      
+      var myFrom = new Date(rangeFrom);
+      var outputFrom = formatDate(myFrom);
+      console.log(outputFrom);
+      
+      var myTo = new Date(rangeTo);
+      var outputTo = formatDate(myTo);
+      console.log(outputTo);
+      
+
+
 
 
     const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
 
     var currentDate = new Date().toJSON().slice(0,10);
-    console.log(currentDate);
-    var from = new Date('2020/01/01');
-    var to   = new Date('2020/01/31');
-    var check = new Date(currentDate);
-    console.log(check > from && check < to);
-
 
     const [graphicData, setGraphicData] = useState([{ y: 0 }, { y: 0 }, { y: 100 }]); // Data used to make the animate prop work
     const [graphicData2, setGraphicData2] = useState([{ y: 0 }, { y: 0 }, { y: 100 }]); // Data used to make the animate prop work
@@ -47,7 +57,7 @@ const Page = ({ title, range, content, image, compatabilitySign1, compatabilityS
                     <Col md={6}>
                         <h1 className='sign-title'>{title}</h1>
                         <p>{date}</p>
-                        <p className='sign-range'>{range}</p>
+                        <p className='sign-range'>{outputFrom + ' - '+ outputTo}</p>
                         <p className='sign-content'>{content}</p>
                     </Col>
                     <Col md={6} className='text-center'>
