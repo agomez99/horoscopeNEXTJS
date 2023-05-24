@@ -25,9 +25,6 @@ const Page = ({ title, range, content, image, compatabilitySign1, compatabilityS
       console.log(outputTo);
       
 
-
-
-
     const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
 
     var currentDate = new Date().toJSON().slice(0,10);
@@ -56,8 +53,8 @@ const Page = ({ title, range, content, image, compatabilitySign1, compatabilityS
                 <Row>
                     <Col md={6}>
                         <h1 className='sign-title'>{title}</h1>
-                        <p>{date}</p>
-                        <p className='sign-range'>{outputFrom + ' - '+ outputTo}</p>
+                        <p className='sign-range'>{"(" + outputFrom + ' - '+ outputTo + ")"}</p>
+                        <p className='sign-date'>{"Today: " + date}</p>
                         <p className='sign-content'>{content}</p>
                     </Col>
                     <Col md={6} className='text-center'>
@@ -67,9 +64,10 @@ const Page = ({ title, range, content, image, compatabilitySign1, compatabilityS
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={12} className=" ">
-                                <p className='text-center'>Compatability Matches</p>
-                        <div className="chart-container">
+
+                <h2 className='text-center comp-header'>Compatability Matches</h2>
+                    <Col md={12} className="chart-container">
+                        <div >
                             <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="svg-container" style={{ width: "400px", height: "220px" }}>
                                 <VictoryPie standalone={false} data={graphicData} width={250} height={250} colorScale={['#c949a7', '#870865']} innerRadius={68} labelRadius={100} animate={{ easing: 'exp' }} labels={() => null} />
                                 <VictoryLabel textAnchor="middle" style={{ fontSize: 40, fill: "white" }} x={125} y={145} text={comp1percent+"%"} />

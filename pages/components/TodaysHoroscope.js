@@ -74,8 +74,10 @@ const TodaysHoroscope = () => {
 
   return (
     <div>
-      <h1 className='text-center'>Todays Horoscope</h1>
-      <p className='text-center'>{currentDate}</p>
+    <div className='todaytitleDiv'>
+      <h2 className='text-center todayTitle'>Todays Horoscope</h2>
+      <p className='text-center todayDate'>{currentDate}</p>
+      </div>
       <p>{title}</p>
       <div className='text-center'>
       <Image src={logoImage} alt="horoscope" width={150} height={150} className='todaysImage' />

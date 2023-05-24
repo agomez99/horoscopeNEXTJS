@@ -18,7 +18,7 @@ const Map = () => {
       <Row >
         {Array.from({ length: 3 }, (_, index) => (
           <Col className="horoscope-col text-center" style={{ height: 'auto' }} key={index}>
-            <div className="image-box-container">
+            <div >
               {dataForDisplay.slice(index * 4, index * 4 + 4).map((title, subIndex) => (
                 <ul key={subIndex} className="ul-img">
                   <a href={`/sign/${signs.features[subIndex + index * 4].properties.title}`} className="signlink">
