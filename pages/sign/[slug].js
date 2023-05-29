@@ -50,7 +50,16 @@ const Page = ({ title, range, content, image, compatabilitySign1, compatabilityS
         <div>
             <Navbar />
             <Container className='sign-div'>
+            <Row>
+ 
+                    <Col  md={6} className='text-center '>
+                        <div className="image-mobile">
+                            <Image src={image} width={300} height={300} alt="image" className='signpage-image' />
+                        </div>
+                    </Col>
+                </Row>
                 <Row>
+                
                     <Col md={6}>
                         <h1 className='sign-title'>{title}</h1>
                         <p className='sign-range'>{"(" + outputFrom + ' - '+ outputTo + ")"}</p>

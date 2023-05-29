@@ -107,8 +107,13 @@ p{
 
 /* Page for Sign */
 .image-box{
-  margin-top: 1rem;
+  margin-top: 10rem;
   margin-bottom: 2rem;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4px;
+  align-items: center;
+  justify-items: center;
 }
 .chart-container {
   display: flex;
@@ -132,10 +137,15 @@ p{
 /* Todays Horoscope desktop */
 .todaysImage{
   margin:10px;
-  float:right;
+  float:center;
+}
+.todaysContent{
+  display: inline-block;
 }
 
-
+.image-mobile{
+  display: none;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -149,7 +159,9 @@ p{
     width: 100px;
     height: 100px;
   }
-
+  .image-box{
+  display: none;
+  }
   .chart-container {
     display:inline;
     margin-left: 15%;
@@ -161,7 +173,12 @@ p{
     width: 60px;
     height: auto;
   }
-
+  .image-mobile{
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
   .sign-title{
     text-align: center;
   }
@@ -195,10 +212,13 @@ p{
   .todaysImage{
     height:100px;
     width:100px;
+    float:right;
+
   }
+
   .todaysContent{
     font-size: .8rem;
-
+    display: flex;
   }
   .todayTitle{
     margin-right: 2rem;
