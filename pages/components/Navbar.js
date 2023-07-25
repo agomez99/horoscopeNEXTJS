@@ -29,7 +29,7 @@ function Navbar() {
               <Image src="/horoscope.png" width={40} height={40} alt="zodiac-image" className='float-end' />
             </Nav.Link>
           </Nav.Item>
-          <Nav className="justify-content-end flex-grow-1 pe-3">
+          <Nav className="justify-content-end flex-grow-1 pe-3 m-3">
 
             <NavDropdown
               title="Horoscopes"
@@ -37,9 +37,9 @@ function Navbar() {
             >
               {dropdownAllScopes}
             </NavDropdown>
-            <Nav.Link href="/about">
+{/*             <Nav.Link href="/about">
               About
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
 
         </Nav>

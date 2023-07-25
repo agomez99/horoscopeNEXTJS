@@ -55,37 +55,37 @@ import horoscopeData from '../data/horoscope.json';
 import Image from 'next/image';
 
 const TodaysHoroscope = () => {
-  const [currentHoroscope, setCurrentHoroscope] = useState(null); // use state hook to manage the current horoscope data
-  const currentDate = new Date().toLocaleDateString('en-US'); // get current date in localized string using toLocaleDateString method
+    const [currentHoroscope, setCurrentHoroscope] = useState(null); // use state hook to manage the current horoscope data
+    const currentDate = new Date().toLocaleDateString('en-US'); // get current date in localized string using toLocaleDateString method
 
-  useEffect(() => { // use the useEffect hook to find and set the current horoscope
-    const horoscopeList = horoscopeData.features;
-    const horoscope = horoscopeList.find(h => {
-      const horoscopeStartDate = new Date(h.properties.rangeFrom).toLocaleDateString('en-US'); // use toLocaleDateString method to convert date string to a localized date string
-      const horoscopeEndDate = new Date(h.properties.rangeTo).toLocaleDateString('en-US'); // use toLocaleDateString method to convert date string to a localized date string
-      return currentDate >= horoscopeStartDate && currentDate <= horoscopeEndDate;
-    });
-    setCurrentHoroscope(horoscope);
-  }, [currentDate]);
+    useEffect(() => { // use the useEffect hook to find and set the current horoscope
+        const horoscopeList = horoscopeData.features;
+        const horoscope = horoscopeList.find(h => {
+            const horoscopeStartDate = new Date(h.properties.rangeFrom).toLocaleDateString('en-US'); // use toLocaleDateString method to convert date string to a localized date string
+            const horoscopeEndDate = new Date(h.properties.rangeTo).toLocaleDateString('en-US'); // use toLocaleDateString method to convert date string to a localized date string
+            return currentDate >= horoscopeStartDate && currentDate <= horoscopeEndDate;
+        });
+        setCurrentHoroscope(horoscope);
+    }, [currentDate]);
 
-  if (!currentHoroscope) return <div>Loading...</div>; // show loading text while the horoscope is being set
+    if (!currentHoroscope) return <div>Loading...</div>; // show loading text while the horoscope is being set
 
-  const { title, content, logoImage } = currentHoroscope.properties; // destructure the current horoscope's properties
+    const { title, content, logoImage } = currentHoroscope.properties; // destructure the current horoscope's properties
 
-  return (
-    <div>
-    <div className='todaytitleDiv'>
-      <h2 className='text-center todayTitle'>Todays Horoscope</h2>
-      <p className='text-center todayDate'>{currentDate}</p>
-      </div>
-      <h2>{title}</h2>
-      <div className='text-center'>
-      <Image src={logoImage} alt="horoscope" width={150} height={150} className='todaysImage' />
-      </div>
-      <p className='todaysContent'>{content}</p>
+    return (
+        <div>
+            <div className='todaytitleDiv'>
+                <h2 className='text-center todayTitle'>Todays Horoscope</h2>
+                <p className='text-center todayDate'>{currentDate}</p>
+            </div>
+            <h2 className='text-center '>{title}</h2>
+            <div className='text-center'>
+                <Image src={logoImage} alt="horoscope" width={150} height={150} className='todaysImage' />
+            </div>
+            <p className='todaysContent'>{content}</p>
 
-         </div>
-  );
+        </div>
+    );
 }
 
 export default TodaysHoroscope;

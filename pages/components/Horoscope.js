@@ -22,7 +22,7 @@ const Map = () => {
               {dataForDisplay.slice(index * 4, index * 4 + 4).map((title, subIndex) => (
                 <ul key={subIndex} className="ul-img">
                   <a href={`/sign/${signs.features[subIndex + index * 4].properties.title}`} className="signlink">
-                    <p>{signs.features[subIndex + index * 4].properties.title}</p>
+                    <p className="sign-title">{signs.features[subIndex + index * 4].properties.title}</p>
                     <ReactImageFallback
                       src={signs.features[subIndex + index * 4].properties.logoImage}
                       fallbackImage={fallback}
