@@ -23,7 +23,7 @@ function Navbar() {
     <div>
       {[false].map((expand) => (
 
-        <Nav className="justify-content-beginning" activeKey="/home" key={expand} bg="light" expand={expand}>
+        <Nav className="justify-content-beginning" activeKey="/home" key={expand} bg="light" expand='false'>
           <Nav.Item>
             <Nav.Link href="/">
               <Image src="/horoscope.png" width={40} height={40} alt="zodiac-image" className='float-end' />
